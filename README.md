@@ -2,7 +2,7 @@
 
 ## Najważniejsze informacje
 
-* Nie przepisujemy z ekranu
+* Nie przepisujemy z ekranu (cały kod napisany przez instruktora będzie udostępniany na GitHubie)
 * Hosty czynne do piątku do 17:00
 * Nie instalujemy żadnych dodatkowych programów
 * Pamiętamy o systemie łapek na Zoomie
