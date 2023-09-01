@@ -1,4 +1,6 @@
-# Najważniejsze informacje
+# Witamy na szkoleniu z Pythona!
+
+## Najważniejsze informacje
 
 * Nie przepisujemy z ekranu
 * Hosty czynne do piątku do 17:00
