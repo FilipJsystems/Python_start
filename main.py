@@ -25,15 +25,34 @@ z = '3'
 
 #########
 
-if x == 3:
-    print('tak, x = 4')
-else:
-    print('nie, x nie jest równy 4')
-
-x = input('podaj swoj wiek')
+# if x == 3:
+#     print('tak, x = 4')
+# else:
+#     print('nie, x nie jest równy 4')
+#
+# x = input('podaj swoj wiek')
 
 # Napisz program który przyjmie od użyszkodnika imię oraz nazwisko, a następnie
 # wypisze na konsoli komunikat typu "Witaj TwojeImie TwojeNazwisko!"
+
+imie = input('podaj swoje imie')
+nazwisko = input('podaj swoje nazwisko')
+print(f'Witaj, {imie} {nazwisko}')
+
+x = 3.7359835
+print(f'{x:.3f}')
+
+x = 3.7359835
+print(f'{x:.2f}')
+
+print(round(x, 2))
+
+###################################
+
+# BMI= masa/(wzrost*wzrost) .
+# Napisz program który odbierze od użytkownika jego masę w kilogramach i wzrost w metrach, wyliczy i wypisze BMI.
+
+
 
 
 
