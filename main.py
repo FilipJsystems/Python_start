@@ -70,7 +70,110 @@ print(bmi)
 # Rozbuduj swój program do bmi w taki sposob by poza wyswietleniem obliczonego bmi
 #   wyświetlił nam również odpowiedni opis wg skali z Wikipedii.
 
+masa = float(input("Podaj swoją masę w kilogramach: "))
+wzrost = float(input("Podaj swój wzrost w metrach: "))
+bmi = masa / (wzrost ** 2)
+
+if bmi < 18.5:
+    opis = "niedowaga"
+elif bmi >= 18.5 and bmi <= 25.0 :
+    opis = "pożądana masa ciała"
+else:
+    opis = "otyłość"
+
+print(f"Twoje BMI wynosi: {bmi:.2f}, co wskazuje na {opis}")
+print('Twoje bmi wynosi {:.2f}'.format(bmi))
+print('Twoje bmi wynosi'+ str(round(bmi, 2)))
 
 # niedowaga	bmi <= 18.49
 # pożądana masa ciała	18.5 – 24.99 optimum	minimalne
 # nadwaga	bmi > = 25.0
+
+###################################
+
+x = int(input('podaj wiek'))
+
+
+#0---------18-----------------------------64------------
+
+if x <18  or x > 64:
+    print('osoba w wieku nie-pracującym')
+elif x >= 18: and x <= 64
+    print('osoba w wieku pracującym')
+
+#-----0---------18-----------------------------64------------
+
+if x < 18 and x>0:
+    print('osoba niepelnoletnia')
+elif x >= 18:
+    print('osoba pelnoletnia')
+else:
+    print('bledny input - podaj liczbe wieksza od zera')
+
+#-----0---------18-----------------------------64------------
+
+x = float(input('podaj wiek'))
+if x <18  or x > 64:
+    print('osoba w wieku nie-pracującym')
+###### nastepny warunek
+if x <= 18:
+    print('osoba niepelnoletnia')
+#-----0---------18-----------------------------64------------
+
+x = float(input('podaj wiek'))
+if x <18  or x > 64:
+    print('osoba w wieku nie-pracującym')
+###### nastepny warunek
+elif x <= 18:
+    print('osoba niepelnoletnia')
+
+#-----0---------18-----------------------------64------------
+
+# jak nie robic - nie porownywac roznych typowe danych
+x = input('podaj wiek')
+if x <18  or x > 64:
+    print('osoba w wieku nie-pracującym')
+###### nastepny warunek
+elif x <= 18:
+    print('osoba niepelnoletnia')
+
+#-----0---------18-----------------------------64------------
+
+x = input('podaj wiek')
+if x <'18'  or x > '64':
+    print('osoba w wieku nie-pracującym')
+###### nastepny warunek
+elif x <= '18':
+    print('osoba niepelnoletnia')
+
+
+x = input('podaj plec')
+if x == 'kobieta':
+    print('kobieta')
+else:
+    print('cos innego')
+
+
+x = input('podaj litera')
+if x > 'c':
+    print('wiekszy')
+else:
+    print('mniejszy')
+
+#-------------------------------------------------------------
+x = False
+x = None
+
+if x == True:
+    print('True')
+else:
+    print('False')
+
+
+
+
+
+
+
+
+
