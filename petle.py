@@ -121,8 +121,11 @@ while i <= 18:
 
 
 
+# 2**i , i<wartosc uzytkownika
+#Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi nie przekroczy wartości podanej przez użytkownika
 
-
+# 2**i , 2**i < wartosc uzytkownika
+#Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość wyniku potegowania nie przekroczy wartości podanej przez użytkownika
 
 
 
