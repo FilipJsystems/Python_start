@@ -1,6 +1,6 @@
 
 
-for x in range(1, 21):
+for x in range(1, 21):              # przykład pętli for z użyciem dwóch oddzielnych instrukcji warunkowych, z których tylko pierwszy jest spełniony za sprawą 'break'
     print(x)
     if x < 18 or x > 64:
         print('osoba w wieku nie-pracującym')
@@ -11,7 +11,7 @@ for x in range(1, 21):
 
 
 
-for x in range(1, 100):
+for x in range(1, 100):     # tutaj tak samo - 'break' wyrzuca nas z pętli
     print(x)
     if x == 18:
         print('pierwszy break')
@@ -21,7 +21,7 @@ for x in range(1, 100):
         print('drugi break')
         break
 
-for x in range(1, 30):
+for x in range(1, 30):          # dwa oddzielne warunki bez 'break' - oba wyświetlone
     print(x)
     if x == 18:
         print('18-nastka!')
@@ -30,7 +30,7 @@ for x in range(1, 30):
         print('18-nastka')
 
 
-for x in range(1, 30):
+for x in range(1, 30):      # przykład 'continue' - przejście do następnej iteracji
     print(x)
     if x == 18:
         print('18-nastka!')
@@ -58,26 +58,26 @@ for i in range(1, 21):
 
 # Wydrukuj co 2 liczbę z zakresu 1-50   #
 
-for i in range(1, 26):
+for i in range(1, 26):      # parzyste
     print(2*i)
 
-for i in range(1, 26):
+for i in range(1, 26):      # nieparzyste
     print(2*i-1)
 
 ########################################
-# modulo - reszta z dzielenia
+# % - modulo - reszta z dzielenia
 
-for i in range(1, 51):
-    if i % 2 == 0:
+for i in range(1, 51):  # to samo za pomocą operatora 'modulo'
+    if i % 2 == 0:  # parzyste
         print(i)
 
 for i in range(1, 51):
-    if i % 2 == 1:
+    if i % 2 == 1:  # nieparzyste
         print(i)
 
 ########################################
 
-for i in range(1, 51, 2):
+for i in range(1, 51, 2):  # inny sposób z wykorzystaniem trzeciego argumentu 'range'
     print(i)
 
 ########################################
@@ -107,7 +107,7 @@ while True:
     if i == 18:
         break
 
-############### petla while z ogranizeniem:
+############### petla while z ograniczeniem:
 
 i = 0
 while i <= 18:
@@ -130,7 +130,7 @@ while i <11:
 
 potega_max = int(input('podaj wartość potęgi, ktorą ma nie być przekroczona'))
 i = 0
-while i < potega_max:
+while i < potega_max:   # ograniczenie 'potega_max' wiąże się z kolejnością drukowania i zwiększania indeksu 'i'
     print(i, 2**i)
     i  = i + 1
 
@@ -171,7 +171,7 @@ while 2**iPetlaIteracjaMax <= iWartoscPotegi:
 
 # kwota1 = kwota0*(1+r/(100*12))
 
-
+# można sprawdzić zgodność dla n-tego miesiąca zgodnie ze wzorem: https://pl.wikipedia.org/wiki/Kapitalizacja_odsetek
 
 
 
