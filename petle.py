@@ -82,6 +82,41 @@ for i in range(1, 51, 2):
 
 ########################################
 
+# Wydrukuj liczby w zakresie 1-100 wypisujac obok czy dana liczba jest
+#   parzysta czy nieparzysta
+
+for i in range(1, 101):
+    a = 'parzysta'
+    b = 'nieparzysta'
+    if i % 2 == 1:
+        print(i, b)
+    elif i % 2 == 0:
+        print(i, a)
+
+############### nieskonczona petla
+while True:
+    print('info')
+
+
+############### nieskonczona petla z przerwa - nie rekomendowane
+i=0
+while True:
+    i = i + 1
+    #i += 1
+    print(i)
+    if i == 18:
+        break
+
+############### petla while z ogranizeniem:
+
+i = 0
+while i <= 18:
+    print(i)
+    i += 1
+
+
+# Napisz korzystajac z petli while program który wyświetli
+#  10 kolejnych potęg liczby 2.
 
 
 
@@ -89,4 +124,24 @@ for i in range(1, 51, 2):
 
 
 
+
+
+
+
+
+
+
+
+
+########################################
+
+
+
+ # Napisz symulator lokaty. Symulator ma przyjmować przez zmienne:
+ #  - kwotę lokaty
+ #  - oprocentowanie w skali roku
+ #  - ilość miesięcy na jaką zakladamy lokatę
+ #  Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc
+ #  oraz ile mamy aktualnie zgromadzone na koncie po doliczeniu odsetek.
+ #  Kapitalizacja comiesięczna
 

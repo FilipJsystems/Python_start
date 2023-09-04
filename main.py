@@ -161,6 +161,7 @@ else:
     print('mniejszy')
 
 #-------------------------------------------------------------
+x = True
 x = False
 x = None
 
@@ -184,6 +185,9 @@ if x28:
 
 if not x28:
     print('Not exists')
+
+
+
 
 
 
