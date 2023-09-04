@@ -117,34 +117,65 @@ while i <= 18:
 
 # Napisz korzystajac z petli while program który wyświetli
 #  10 kolejnych potęg liczby 2.
+# moja wersja: od 1 do 10 wlacznie
 
-
+i = 1
+while i <11:
+    print(2**i)
+    i = i + 1
 
 
 # 2**i , i<wartosc uzytkownika
 #Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość potęgi nie przekroczy wartości podanej przez użytkownika
 
+potega_max = int(input('podaj wartość potęgi, ktorą ma nie być przekroczona'))
+i = 0
+while i < potega_max:
+    print(i, 2**i)
+    i  = i + 1
+
+potega_max = int(input('podaj wartość potęgi, ktorą ma nie być przekroczona'))
+i = 0
+while i < potega_max - 1:
+    i  = i + 1
+    print(i, 2 ** i)
+
 # 2**i , 2**i < wartosc uzytkownika
 #Napisz pętlę while która będzie wyświetlała kolejne potęgi liczby 2 aż wartość wyniku potegowania nie przekroczy wartości podanej przez użytkownika
 
-
-
-
-
-
-
-
-
+iWartoscPotegi = int(input('Podaj max wartosc potegi liczby 2 do której to mam liczyć wynik: '))
+iPetlaIteracjaMax = 0
+while 2**iPetlaIteracjaMax <= iWartoscPotegi:
+    print(2**iPetlaIteracjaMax)
+    iPetlaIteracjaMax = iPetlaIteracjaMax + 1
 
 ########################################
 
-
-
  # Napisz symulator lokaty. Symulator ma przyjmować przez zmienne:
  #  - kwotę lokaty
- #  - oprocentowanie w skali roku
+ #  - oprocentowanie w skali roku # 0.05, 5% -> 5 -- trzeba podzielic przez 100
  #  - ilość miesięcy na jaką zakladamy lokatę
  #  Symulator ma dla każdego miesiąca lokaty wypisać który to miesiąc
  #  oraz ile mamy aktualnie zgromadzone na koncie po doliczeniu odsetek.
  #  Kapitalizacja comiesięczna
+
+ #r = 0.05
+
+# kwota1 = kwota0*(1+r/12)
+# kwota2 = kwota1*(1+r/12)
+# kwota3 = ...
+# ....
+# ..
+
+#r = 5
+
+# kwota1 = kwota0*(1+r/(100*12))
+
+
+
+
+
+
+
+
 
