@@ -41,5 +41,52 @@ for x in range(1, 30):
 
 
 # Wyświetl 20 kolejnych potęg liczby 2  # 1-20
-# Wydrukuj co 2 liczbę z zakresu 1-50   # 
+
+# 2**1 = 2
+# 2**2 = 4
+# 2**3 = 8
+# 2**4 = 16
+# 32
+# 64
+# 128
+#
+#
+# 2**i
+
+for i in range(1, 21):
+    print(2**i)
+
+# Wydrukuj co 2 liczbę z zakresu 1-50   #
+
+for i in range(1, 26):
+    print(2*i)
+
+for i in range(1, 26):
+    print(2*i-1)
+
+########################################
+# modulo - reszta z dzielenia
+
+for i in range(1, 51):
+    if i % 2 == 0:
+        print(i)
+
+for i in range(1, 51):
+    if i % 2 == 1:
+        print(i)
+
+########################################
+
+for i in range(1, 51, 2):
+    print(i)
+
+########################################
+
+
+
+
+
+
+
+
 

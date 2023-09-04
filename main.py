@@ -169,8 +169,21 @@ if x == True:
 else:
     print('False')
 
+##################################
+def f(x):
+    if x>18:
+        return x
 
+x28 = f(15)
 
+if x28 == None:
+    print('None')
+
+if x28:
+    print('Exists')
+
+if not x28:
+    print('Not exists')
 
 
 
