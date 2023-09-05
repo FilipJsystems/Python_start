@@ -172,7 +172,141 @@ f = open(path,'w')
 f.write(newline)
 f.close()
 
-
 ##########################################################
+### operacjach na stringach (ale wczesniej podstawy list)
+
+#'\r', '\n'
+
+print("hello \n world")
+print("hello \r world")
+print("hello \r\n world")
+print("hello \n\r world")
+
+
+print(type(range(1,10)))
+
+lista = [1,2,3,5,8,13]
+
+print(lista[0]) # 1
+print(lista[5]) # 13
+
+krotka = (1,2,3)
+print(type(krotka))
+print(type(lista))
+
+lista.append(21)
+
+x = 1
+x +=1
+x = x + 1
+print(x)
+
+#########
+
+x = 3
+y = x
+
+x = x + 2
+
+print(y)
+
+#########
+
+lista = [1,2,3,5,8,13]
+
+lista2 = lista
+
+lista.append(21)
+
+print(lista2)
+
+############
+
+
+lista = [1,2,3,5,8,13]
+
+lista2 = lista.copy()
+
+lista.append(21)
+
+print(lista2)
+
+########################
+
+lista = [1,2,3,5,8,13]
+
+lista = lista.append(21)   # tak nie postepowac z listami!!!
+print(lista)
+
+########################
+
+lista = [1,2,3,5,8,13]
+
+lista.append(21)   # tak postepowac z listami!!!
+print(lista)
+
+#######################
+
+lista = [1,2,3,5,8,13]
+
+for i in range(0,6):
+    print(lista[i])
+
+for el in lista:
+    print(el)
+
+
+for i, el in enumerate(lista):
+    print(i, el)
+
+###################################
+
+import time
+
+s1 = time.time()
+lista = [i for i in range(1,10000000)]
+e1 = time.time()
+print('lista skladana - czas egzekucji', e1 - s1)
+
+
+length = len(lista)
+
+s1 = time.time()
+for i in range(0,length):
+    element = lista[i]
+e1 = time.time()
+print('lista w petli po indeksie - czas egzekucji', e1 - s1)
+
+s1 = time.time()
+for el in lista:
+    element = el
+e1 = time.time()
+print('lista w petli po elemencie - czas egzekucji', e1 - s1)
+
+s1 = time.time()
+for i, el in enumerate(lista):
+    element = el
+    index = i
+e1 = time.time()
+print('lista w petli po elemencie i indeksie z uzyciem enumerate - czas egzekucji', e1 - s1)
+
+######################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
