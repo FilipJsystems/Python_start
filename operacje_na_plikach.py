@@ -292,13 +292,24 @@ print('lista w petli po elemencie i indeksie z uzyciem enumerate - czas egzekucj
 
 ######################################################################
 
+#
+# Napisz kod który umieści w liście 10 kolejnych potęg liczby 2.
+# Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na konsoli w osobnej linii.
 
+lista = []
+#lista = list() # alternatywna werja tworzenia listy
+for i in range(1,11):
+    lista.append(2**i)
 
+for el in lista:
+    print(el)
 
+#################
 
+for i in range(0,10):
+    print(lista[i])
 
-
-
+######################################################################
 
 
 
