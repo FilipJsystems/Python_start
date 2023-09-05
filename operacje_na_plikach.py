@@ -348,6 +348,19 @@ with open(path, 'r') as f:
         if line.strip():  # sprawdza czy dana linia jest pusta
             print(line.strip())
 
+
+# path = r'C:\Users\localadmin\PycharmProjects\pythonProject\\'+ 'file_empty_lines.txt'
+# with open(path) as f:
+#     l = f.readlines()
+#     print(l)
+#     for i in l:
+#         if not i.strip():
+#             l.remove(i)
+# print(l)
+#
+# for el in l:
+#     print(el)
+
 #######################
 
 string = 'byle jaki string z roznymi  - literami Duzymi I Malymi'
@@ -371,3 +384,13 @@ print(string.split('-'))
 # podanego przez użytkownika w pliku którego nazwę również poda użytkownik.
 
 
+# Korzystajac z petli stworz liste zawierajaca elementy same bedace listami.
+# Kazdy taki element ma zawierac numer potegi oraz wartosc tej potegi dla liczby 2.
+
+
+
+# Napisz wyszukiwarkę plikową. Wyszukiwarka powinna odebrać od użytkownika
+#  poszukiwaną frazę, oraz nazwę pliku. Wyszukiwarka powinna wyświetlić
+#   inie w których znalazła poszukiwaną frazę wraz z numerem linii. Wyszukiwarka
+#     odebraniu danych od uzyszkodnika powinna wyswietlic jakiej frazy
+#   i  jakim pliku szuka. Wyszukiwarka powinna być nieczula na wielkosc liter.
