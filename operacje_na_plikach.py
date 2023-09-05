@@ -264,7 +264,7 @@ for i, el in enumerate(lista):
 import time
 
 s1 = time.time()
-lista = [i for i in range(1,10000000)]
+lista = [i for i in range(1,10000001)]
 e1 = time.time()
 print('lista skladana - czas egzekucji', e1 - s1)
 
@@ -311,10 +311,29 @@ for i in range(0,10):
 
 ######################################################################
 
+#Napisz program który wyświetli na konsoli niepuste linie z pliku tekstowego którego nazwę poda użytkownik
+# line.strip()
+
+string = """Hello WorldHello Python!!!
+
+New message,
+
+another message, last message...
 
 
+"""
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject\\'+ 'file_empty_lines.txt'
+f = open(path,'w')
+f.write(string)
+f.close()
 
 
+with open(path, 'r') as f:
+    l = f.readlines()  # to jest lista
+    print(l)
+
+
+#l.remove()
 
 
 
