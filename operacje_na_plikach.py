@@ -332,11 +332,42 @@ with open(path, 'r') as f:
     l = f.readlines()  # to jest lista
     print(l)
 
+#if line.strip(): # sprawdza czy dana linia jest pusta
 
+print('    \n'.strip())
+print('     hello world      bla        '.strip().strip())   # resultat: 'hello'
+print('\n'.strip())
 #l.remove()
 
 
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject\\'+ 'file_empty_lines.txt'
+with open(path, 'r') as f:
+    l = f.readlines()  # to jest lista
+    print(l)
+    for line in l:
+        if line.strip():  # sprawdza czy dana linia jest pusta
+            print(line.strip())
+
+#######################
+
+string = 'byle jaki string z roznymi  - literami Duzymi I Malymi'
+
+print(string.count('i'))
+print(string.count('I'))
+
+print(string.upper())
+print(string.lower())
+
+print(string.lower().count('i'))
+
+print(string.split())
+print(string.split('-'))
+
+# '-' in string
+# 1 in [1,2,3,4]
 
 
+# Napisz program który zliczy ilość wystąpień małej lub dużej wersji ciagu tekstowego
+# podanego przez użytkownika w pliku którego nazwę również poda użytkownik.
 
 
