@@ -198,6 +198,45 @@ print('{:.0}'.format(2.51))
 # Napisz program bedacy licznikiem bomby, który korzystając z pętli while
 # bedzie odliczal od wartosci podanej przez uzytkownika do 0 po czym wypisze "kaboom!"
 
+import time
 
+start = time.time()
+for i in range(0,500000):
+    pass
+    #time.sleep(0.5)
+    print(i)
+end = time.time()
+print(end-start)
 
+############################
 
+liczba = int(input('podaj liczbe do odliczania'))
+
+while liczba > 0:
+    print(liczba)
+    time.sleep(0.5)
+    liczba -= 1
+
+print('kaboom!')
+
+############################
+
+liczba = int(input('podaj liczbe do odliczania'))
+
+while liczba > -100:
+    print(liczba)
+    time.sleep(0.5)
+    liczba -= 1
+    if liczba == 0:
+        print('kaboom!')
+        break
+
+############################
+
+import random as rn
+
+rn.random()
+rn.randrange(0,100)
+
+# Napisz program który będzie dodawał kolejne losowe wartości z zakresu
+# od 1 do 10 do zmiennej suma, tak dlugo az suma nie osiagnie wartosci wiekszej od wartosci podanej przez uzytkownika
