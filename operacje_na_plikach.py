@@ -42,7 +42,6 @@ x = f.read()
 print(x)
 f.close()
 
-
 path = r'C:\Users\localadmin\PycharmProjects\pythonProject\\'+ 'plik.bin'
 f = open(path, 'rb') # read binary - czytanie binarnego
 print(f.read())
@@ -77,6 +76,23 @@ another message, last message...
 # 2 odczytaj (sprawdz) przez Pythona czy dobrze jest stworzony
 # 3 zmodyfikuj plik usuwajac znaki specjalne ('!', ',', '.')
 
+string = """
+Hello WorldHello Python!!!
+New message,
+another message, last message...
+"""
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject\\'+ 'file.txt'
+with open(path, 'w') as f:
+    f.write(string)
+
+with open(path, 'r') as f:
+    x = f.read()
+    print(x)
+
+x = x.replace(',', '').replace('.', '').replace('!', '')
+
+with open(path, 'w') as f:
+    f.write(x)
 
 ##############################################################################
 
