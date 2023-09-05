@@ -383,12 +383,20 @@ print(string.split('-'))
 # Napisz program który zliczy ilość wystąpień małej lub dużej wersji ciagu tekstowego
 # podanego przez użytkownika w pliku którego nazwę również poda użytkownik.
 
+fraza = input('podaj szukana fraze')
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject\plik.txt'
+counter = 0
+with open(path, 'r') as file:
+    for line in file:
+        counter = counter + line.lower().count(fraza.lower())
+print(counter)
+
 
 # Korzystajac z petli stworz liste zawierajaca elementy same bedace listami.
 # Kazdy taki element ma zawierac numer potegi oraz wartosc tej potegi dla liczby 2.
 
 
-
+# to na jutro (musze omowic biblioteke os)
 # Napisz wyszukiwarkę plikową. Wyszukiwarka powinna odebrać od użytkownika
 #  poszukiwaną frazę, oraz nazwę pliku. Wyszukiwarka powinna wyświetlić
 #   inie w których znalazła poszukiwaną frazę wraz z numerem linii. Wyszukiwarka
