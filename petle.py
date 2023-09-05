@@ -188,7 +188,15 @@ kwota_teoretyczna = kwota0*((1+ r/12)**miesiace)
 print('kwota ze wzoru', round(kwota_teoretyczna, 2))
 
 
+import math
+print(math.floor(2.9))
 
+print('{:.0}'.format(2.51))
+
+###################
+
+# Napisz program bedacy licznikiem bomby, który korzystając z pętli while
+# bedzie odliczal od wartosci podanej przez uzytkownika do 0 po czym wypisze "kaboom!"
 
 
 
