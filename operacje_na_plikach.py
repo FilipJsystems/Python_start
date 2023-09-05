@@ -76,18 +76,19 @@ another message, last message...
 # 2 odczytaj (sprawdz) przez Pythona czy dobrze jest stworzony
 # 3 zmodyfikuj plik usuwajac znaki specjalne ('!', ',', '.')
 
-string = """
-Hello WorldHello Python!!!
-New message,
-another message, last message...
-"""
+string = """Hello WorldHello Python!!!
+            New message,
+            another message, last message..."""
 path = r'C:\Users\localadmin\PycharmProjects\pythonProject\\'+ 'file.txt'
 with open(path, 'w') as f:
     f.write(string)
 
+
 with open(path, 'r') as f:
-    x = f.read()
-    print(x)
+    l = f.readlines()
+    print(l)
+    print(len(l))
+
 
 x = x.replace(',', '').replace('.', '').replace('!', '')
 
@@ -109,4 +110,69 @@ another message, last message...
 # 1 stworz plik, ktory bedzie mial powyzsza tresc
 # 2 odczytaj (sprawdz) przez Pythona czy dobrze jest stworzony
 # 3 zmodyfikuj plik usuwajac znaki specjalne ('!', ',', '.')
+
+string = """Hello WorldHello Python!!!
+New message,
+another message, last message...
+"""
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject\\'+ 'file.txt'
+with open(path, 'w') as f:
+    f.write(string)
+
+########
+
+with open(path, 'r') as f:
+    l = f.readlines()
+    print(l)
+
+
+i = -1
+with open(path, 'w') as f:
+    for el in l:
+        i = i+1
+        if i == 0:
+            print('0')
+            x = el.replace(',', '')
+            f.write(x)
+        elif i == 1:
+            y = el.replace('!', '')
+            f.write(y)
+        elif i == 2:
+            z = el.replace('.', '')
+            f.write(z)
+
+#############################
+
+## rozwiazanie Marcina:
+import string
+path = r'c:\Users\piata_m\Downloads\SzkoleniePython\\'+'plik.txt'
+f = open(path,'w') # w = tworzy plik od nowa
+f.write('Zapis do nowego pliku !!!'+'\n')
+f.write('Zapis, do, nowego, pliku !!,'+'\n')
+f.close()
+
+f = open(path,'a') # a = append, dodaje na koncu pliku
+f.write('Dodanie * informacji * do * pliku'+'\r')
+f.close()
+
+i = 0
+newline = ''
+
+with open(path) as f:
+    for line in f:
+        i = i + 1
+        if i == 1:
+            newline = line.replace('!','#')
+        if i == 2:
+            newline = newline + line.replace(',', '$')
+        if i == 3:
+            newline = newline + line.replace('*','^')
+
+f = open(path,'w')
+f.write(newline)
+f.close()
+
+
+##########################################################
+
 
