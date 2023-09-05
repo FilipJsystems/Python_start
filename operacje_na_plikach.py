@@ -38,7 +38,8 @@ f.close()
 
 path = r'C:\Users\localadmin\PycharmProjects\pythonProject\\'+ 'plik.txt'
 f = open(path, 'r') # read - czytanie
-print(f.read())
+x = f.read()
+print(x)
 f.close()
 
 
@@ -70,11 +71,26 @@ Hello WorldHello Python!!!
 New message,
 another message, last message...
 """
-# usunmy z niego znaki specjalne ('!', ',', '.')
+# usunmy z niego znaki specjalne ('!', ',', '.') - sugestia read- traktujemy plik jako calosc
 
 # 1 stworz plik, ktory bedzie mial powyzsza tresc
 # 2 odczytaj (sprawdz) przez Pythona czy dobrze jest stworzony
 # 3 zmodyfikuj plik usuwajac znaki specjalne ('!', ',', '.')
 
 
+##############################################################################
+
+# stworzmy plik o tresci:
+"""
+Hello, World. Hello, Python!!!
+New message!!
+another message, last message...
+"""
+# usunmy z pierwszej linijki tylko ','
+# z drugiej linijki '!'
+# z trzeciej linijki usunmy '.'
+
+# 1 stworz plik, ktory bedzie mial powyzsza tresc
+# 2 odczytaj (sprawdz) przez Pythona czy dobrze jest stworzony
+# 3 zmodyfikuj plik usuwajac znaki specjalne ('!', ',', '.')
 
