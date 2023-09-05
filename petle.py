@@ -173,6 +173,20 @@ while 2**iPetlaIteracjaMax <= iWartoscPotegi:
 
 # można sprawdzić zgodność dla n-tego miesiąca zgodnie ze wzorem: https://pl.wikipedia.org/wiki/Kapitalizacja_odsetek
 
+kwota0 = float(input('podaj kwotę lokaty'))
+r = float(input('podaj oprocentowanie w skali roku w %'))/100
+miesiace = int(input('podaj  ilość miesięcy na jaką zakladamy lokatę'))
+
+
+kwota = kwota0
+for i in range(1, miesiace + 1):
+    kwota = kwota*(1+ r/12)
+    print('kwota po miesiacu', i, round(kwota, 2))
+
+
+kwota_teoretyczna = kwota0*((1+ r/12)**miesiace)
+print('kwota ze wzoru', round(kwota_teoretyczna, 2))
+
 
 
 
