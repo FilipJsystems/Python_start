@@ -25,17 +25,11 @@ t = tuple(i for i in range(0,100))
 
 # tuple(rn.randrange(1,11), rn...)   # to nie jest najwygodniejszy sposob
 
+t1 = tuple( rn.randrange(1,11) for i in range(0,10) )
+t2 = tuple( rn.randrange(11,21) for i in range(0,10) )
 
-
-
-
-
-
-
-
-
-
-
-
+t = t1+t2
+print(t)
+print(len(t))
 
 # Napisz kod ktory wyświetli w postaci listy krotek zawartość pliku dane.txt
