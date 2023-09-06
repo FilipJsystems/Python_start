@@ -608,6 +608,11 @@ import os
 f = os.path.join(path,filename)
 
 # Napisz program który z pliku dane.txt (lub dane.csv) wyświetli powiekszone imiona i nazwiska oraz wzrost i masę
+# 1 kolumna - wzrost w m
+# 2 kolumna - masa w kg
+# 3 kolumna - wiek
+# 4 kolumna - imie i nazwisko
+# print(imie,nazwisko,wzost,masa)
 
 
 
