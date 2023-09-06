@@ -22,3 +22,20 @@ t = tuple(i for i in range(0,100))
 
 # Stwórz dwie krotki. Jedna ma zawierać 10 losowych liczb zakresu 1-10, druga 10 losowych liczb zakresu 11-20.
 # Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę wypisz na konsoli
+
+# tuple(rn.randrange(1,11), rn...)   # to nie jest najwygodniejszy sposob
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Napisz kod ktory wyświetli w postaci listy krotek zawartość pliku dane.txt
