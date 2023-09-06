@@ -608,15 +608,33 @@ import os
 f = os.path.join(path,filename)
 
 # Napisz program który z pliku dane.txt (lub dane.csv) wyświetli powiekszone imiona i nazwiska oraz wzrost i masę
-# 1 kolumna - wzrost w m
+# 1 kolumna - wzrost w m (idac od lewej)
 # 2 kolumna - masa w kg
 # 3 kolumna - wiek
 # 4 kolumna - imie i nazwisko
-# print(imie,nazwisko,wzost,masa)
+# print( imie i nazwisko, wzost, masa)
+
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane.csv'
+
+import os
+filename = os.path.join(path,filename)
 
 
+with open(filename, 'r') as f:
+    for line in f:
+        lista = line.split(',')
+        wzrost = lista[0]
+        masa = lista[1]
+        full_name = str(lista[3]).upper()
+        print(wzrost, masa, full_name)
 
-
+# Korzystajac z list skladanych zaladuj do listy zawartosc pliku dane.txt -- nieobowiązkowo - możemy zrobić normalnie
+# w taki sposób by linie oczyścic z bialych znaków (pozbyc się '\n' oraz spacji - rozdzielić imie i nazwisko, tak, żeby było w oddzielnych polach listy)
+# i rozbić na listy.
+# Każdy z elementów listy sam powinien byc listą. Następnie przeiteruj po wyniku i wyświetl wszystkie elementy listy  linia po linii.
+# przykład: [[wzrost1, waga1, wiek1, imie1, nazwisko1], [wzrost2, waga2, wiek2, imie2, nazwisko2], .... ]
+# lista_list
 
 
 
