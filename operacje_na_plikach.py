@@ -381,12 +381,58 @@ print(type([1,2,3]))
 print(str(type([1,2,3])) == "<class 'list'>")
 
 
+lista = [1, 2, 3, 5, 8, 13, 21, [34], [52, 'x', 0]]
+
+for el in lista:
+    if type(el) == type([]):
+        for el2 in el:
+            print(el2)
+
+########  modyfikacja zadania, zeby wydrukować indeksy - głównej i wewnętrznej listy (jeśli istnieje)
+# indeks glownej listy, indeks listy wewnetrznej (lub brak), wartosc
+# 0 , 'brak indeksu wewnetrzeno', 1
+# 1, 'brak indeksu wewnetrznego', 2
+# ...
+# ...
+# 7, 0, 34
+# 8, 0, 52
+# 8, 1, 'x'
+# 8, 2, 0
+# for i, el in enumerate(lista):
 
 
+lista = [1, 2, 3, 5, 8, 13, 21, [34], [52, 'x', 0]]
 
+for i, el in enumerate(lista):
+    if type(el) == type([]):
+        for j, el2 in enumerate(el):
+            print(i, j, el2)
+    else:
+        print(i, 'brak indeksu wewnetrznego', el)
+
+##########################################################
+
+## alternatywne rozwiazanie od Marcina:
+
+lista = [1,2,3,['x','y','z'],4,['a1','a2','a3'],5]
+c1 = 0
+c2 = 0
+for i in lista:
+    if str(type(i)) == "<class 'list'>": #type(i) == type([])
+        jLista = i
+        for k in jLista:
+            print(str(k)+', ['+str(c1)+', '+str(c2)+']')
+            c2 = c2 + 1
+    else:
+        print(str(i)+', ['+str(c1)+']')
+    c1 = c1 + 1
+    c2 = 0
+
+##########################################################
 
 # Korzystajac z petli stworz liste zawierajaca elementy same bedace listami.
 # Kazdy taki element ma zawierac numer potegi oraz wartosc tej potegi dla liczby 2.
+
 
 
 # to na jutro
