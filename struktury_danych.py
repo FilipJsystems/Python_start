@@ -33,3 +33,16 @@ print(t)
 print(len(t))
 
 # Napisz kod ktory wyświetli w postaci listy krotek zawartość pliku dane.txt
+import os
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane.csv'
+filename = os.path.join(path, filename)
+ListaKoncowa = []
+with open(filename) as f:
+    for line in f:
+        NowaKrotka = tuple(line.split(','))
+        print(type(NowaKrotka))
+        ListaKoncowa.append(NowaKrotka)
+print(ListaKoncowa)
+
+################
