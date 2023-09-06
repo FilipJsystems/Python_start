@@ -518,6 +518,11 @@ print(nlista)
 
 ##################################################
 
+# wersja łatwiejsza (nieobowiązkowo)
+# Napisz kod który umieści w liście 10 kolejnych potęg liczby 2.
+# Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na konsoli w osobnej linii.
+
+
 # Stwórz dwie listy. Każda z list ma zawierać 10 liczb losowych z zakresu 1-10.
 # Połącz te dwie listy do jednej i wyswietl na konsoli (extend albo dodać dwie listy (+))
 
