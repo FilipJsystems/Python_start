@@ -636,8 +636,29 @@ with open(filename, 'r') as f:
 # przykład: [[wzrost1, waga1, wiek1, imie1, nazwisko1], [wzrost2, waga2, wiek2, imie2, nazwisko2], .... ]
 # lista_list
 
+### Rozwiazanie Marcina:
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane.csv'
 
+import os
+filename = os.path.join(path,filename)
+ListaKoncowa = []
+with open(filename) as f:
+    for line in f:
+        lista = line.split(',')
+        Wzrost = lista[0].strip()
+        Masa = lista[1].strip()
+        Wiek = lista[2].strip()
+        ImieNazwisko = lista[3].upper().split(' ')
+        Imie = ImieNazwisko[0].strip()
+        Nazwisko = ImieNazwisko[1].strip()
+        NowaLista = [Wzrost, Masa, Wiek, Imie, Nazwisko]
+        print(NowaLista)
+        ListaKoncowa.append(NowaLista)
+        NowaLista = []
 
+for el in ListaKoncowa:
+    print(el)
 
 
 
