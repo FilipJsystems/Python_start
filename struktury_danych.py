@@ -6,8 +6,9 @@
 # lista moze sie zmieniac pod wzgledem rozmiaru, elementów, ma sporo funkcji na których można działać
 # krotka nie może się zmieniać (może zostać jedynie nadpisana). Prawie nie ma żadnych istotnych funkcji
 
-t = tuple([1, 2, 3, 4])
-t = (1, 1, 1, 2, 3, 4)
+t = tuple([1, 2, 3, 4]) # tak można zadeklarować krotkę
+t = (1, 1, 1, 2, 3, 4)  # tak można zadeklarować krotkę
+# t = tuple(1,2,3,4)   # tak nie można deklarować krotki, ponieważ tuple() przyjmuje tylko jeden argument (najlepiej listę)
 
 t.count(1)  # liczy ilosc elementow
 t.index(4)  # to podaje indeks danego elementu
@@ -25,14 +26,14 @@ t = tuple(i for i in range(0,100))
 
 # tuple(rn.randrange(1,11), rn...)   # to nie jest najwygodniejszy sposob
 
-t1 = tuple( rn.randrange(1,11) for i in range(0,10) )
+t1 = tuple( rn.randrange(1,11) for i in range(0,10) )   # odpowiednik składanej listy dla krotek
 t2 = tuple( rn.randrange(11,21) for i in range(0,10) )
 
 t = t1+t2
 print(t)
 print(len(t))
 
-# Napisz kod ktory wyświetli w postaci listy krotek zawartość pliku dane.txt
+# Napisz kod ktory wyświetli w postaci listy krotek zawartość pliku dane.txt (lista ma zawierać krotki, a krotka ma mieć tyle elementów ile kolumn/komórek w danym wierszu)
 import os
 path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
 filename = 'dane.csv'

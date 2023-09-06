@@ -366,7 +366,7 @@ path = r'C:\Users\localadmin\PycharmProjects\pythonProject\plik.txt'
 counter = 0
 with open(path, 'r') as file:
     for line in file:
-        counter = counter + line.lower().count(fraza.lower())
+        counter = counter + line.lower().count(fraza.lower())   # lower() stanowi ujednolicenie rozmiaru liter, żeby podana fraza nie zależała od wielkości liter
 print(counter)
 
 
@@ -378,13 +378,13 @@ print(counter)
 
 print(type('a'))
 print(type([1,2,3]))
-print(str(type([1,2,3])) == "<class 'list'>")
+print(str(type([1,2,3])) == "<class 'list'>")   # sprawdzenie czy dany element ([1,2,3]) jest listą
 
 
 lista = [1, 2, 3, 5, 8, 13, 21, [34], [52, 'x', 0]]
 
 for el in lista:
-    if type(el) == type([]):
+    if type(el) == type([]):    # inny sposób na sprawdzenie czy dany element jest listą (lepszy i i prostszy)
         for el2 in el:
             print(el2)
 
@@ -431,39 +431,40 @@ for i in lista:
 ##########################################################
 
 l = [0,3,8,9,3,4,2,1]
-l.sort()
-l.reverse()
+l.sort()    # sortowanie listy w naturalnym (rosnącym) porządku
+l.reverse()     # odwrócenie kolejności elementów w liście
 print(l)
 
 l = [0,3,8,9,3,4,2,1]
-l = sorted(l, reverse=True)
+l = sorted(l, reverse=True)     # inny sposób na posortowanie listy i odwrócenie kolejności za jednym razem. Zwróćmy uwagę na to, że tu jest przypisanie l = funkcja(l),
+                                # w przypadku funkcji należących do listy, np l.funkcja() przypisanie daje w rezultacie l = None
 print(l)
 
-from operator import itemgetter
+from operator import itemgetter     # przydatny operator do sortowania po danym elemencie list/krotki wewnętrznej
 
 lista = [[1, 'banan'], [3, 'ananas'], [2, 'cytryna'] ]
 
-lista = sorted(lista, key=itemgetter(0))
-lista = sorted(lista, key=itemgetter(1))
+lista = sorted(lista, key=itemgetter(0))  # sortujemy po pierwszej wartości (zerowym indeksie) , tzn: 1,2,3
+lista = sorted(lista, key=itemgetter(1))  # sortujemy po drugiej wartości (pierwszym indeksie), tzn: ananas, banan, cytryna
 
 l = [0,3,8,9,3,4,2,1,1,1]
-print(l.count(1))
+print(l.count(1))       # zliczanie wystąpienie danego elementu w liście (1)
 
-l.insert(5, 2999) #dodanie
-l.pop(5)
+l.insert(5, 2999) #dodanie elementu 2999 na pozycji indeksu = 5
+l.pop(5)    # usunięcie elementu o indeksie 5
 print(l)
 
-l.remove(9)
-l.remove(1)
+l.remove(9)     # usuniecię elementu o wartości 9
+l.remove(1)     # usunięcie elementu o wartości 1 - nie usuwa to jednak wszystkich wartości 1 z listy, tylko pierwszy jaki napotka
 
-l.remove('x')
+l.remove('x')   # usuniecie elementu o wartości 'x'
 
-suma_list = l + lista
+suma_list = l + lista   # tworzenie nowej listy za pomocą dodania dwóch istniejących list (wymaga to stworzenia nowej zemiennej - suma_list)
 
-l.extend(lista)
+l.extend(lista)         # rozszerzenie obecnej listy o drugą listę - nie wymaga tworzenia nowej zmiennej jak w przypadku powyżej
 
 l = [0,3,8,9,3,4,2,1,1,1]
-l.append(lista)
+l.append(lista)         # dodwanie listy do listy stworzy element listy będący listą
 
 
 # Korzystajac z petli stworz liste zawierajaca elementy same bedace listami.
@@ -476,6 +477,8 @@ for i in range(-10,0):
     lista.append([i, 2**i])
 
 print(lista)
+
+# alternatywnie:
 
 lista = []
 for i in range(1, 11):
@@ -560,7 +563,7 @@ for i in range(1,1000001):
         break
 print('zawsze 1')
 
-# wynika, ze 2 nigdy nie wystepuje wiec musimy zwiekszac o 1 prawa strone range.
+# wynika, ze 2 nigdy nie wystepuje wiec musimy zwiekszac o 1 prawa strone range (przedział prawostronnie otwarty)
 
 
 lista_skladana = [i for i in range(0,10)]
@@ -568,7 +571,7 @@ lista_skladana = [i for i in range(0,10)]
 for i in range(0,10):
     lista_skladana.append(i)
 
-lista_skladana = [str(i) for i in range(0,10)]
+lista_skladana = [str(i) for i in range(0,10)]  # przykładowa operacja na tworzeniu listy składanej (zamiana int na string)
 
 # Korzystając z list składanych wygeneruj listę zawierajaca 10 kolejnych pierwiastków liczby 2
 
@@ -593,19 +596,19 @@ l  = [ i,j,i*j] for i in range(1,11) for j in range(1,11)]
 
 ########
 ### .upper() .lower()
-'filip waszkiewicz'.title()
-'Blockchain in the use of social media'.title()
+'filip waszkiewicz'.title()         # funkcja title podnosi pierwszą literę każdego słowa
+'Blockchain in the use of social media'.title()     # niestety też podnosi słowa typu in, of, the itd - co nie jest wskazane w tytułach
 'COKOLWIEK'.title()
 
 l = 'filip waszkiewicz'.title().split()
 
-s = '@'.join(['Filip', 'Waszkiewicz'])
+s = '@'.join(['Filip', 'Waszkiewicz'])      # join będący odwrotnością split - split tworzy litę ze stringa, join tworzy string z listy
 print(s.split('@'))
 path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
 filename = 'dane.txt'
 
 import os
-f = os.path.join(path,filename)
+f = os.path.join(path,filename)     # bardziej profesjonalny sposób łączenia ścieżek (szczególnie przydatny na systemach Windows)
 
 # Napisz program który z pliku dane.txt (lub dane.csv) wyświetli powiekszone imiona i nazwiska oraz wzrost i masę
 # 1 kolumna - wzrost w m (idac od lewej)
@@ -661,7 +664,6 @@ with open(filename) as f:
 
 for el in ListaKoncowa:
     print(el)
-
 
 
 #Z pliku dane.txt. Dane posortuj po imionach i wyswietl linia po linii na konsoli.

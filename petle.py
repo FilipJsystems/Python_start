@@ -239,4 +239,35 @@ rn.random()
 rn.randrange(0,100)
 
 # Napisz program który będzie dodawał kolejne losowe wartości z zakresu
-# od 1 do 10 do zmiennej suma, tak dlugo az suma nie osiagnie wartosci wiekszej od wartosci podanej przez uzytkownika
+# od 1 do 10 do zmiennej suma, tak dlugo az suma nie osiagnie wartosci wiekszej od wartosci podanej przez uzytkownika.
+# Program powinien printować każdą liczbę (sumę) dopóki jest ona mniejsza od limitu.
+
+limit = float(input('podaj limit'))
+
+suma = 0
+while suma < limit:
+    print(suma)
+    #suma = suma + rn.randrange(1,11)  # od 1 do 10 włącznie - liczby całkowite
+    # suma = suma + (rn.random()+0.1)*10
+    suma = suma + rn.uniform(1,10)
+
+
+# Zadanie domowe:
+# Napisz symulator splaty kredytu. Symulator ma przyjmowac przez zmienne:
+#  - kwotę kredytu
+#  - oprocentowanie w skali roku
+#  - wysokość spłacanej raty
+#  Symulator ma dla każdego miesiąca wypisać który to miesiąc i kwotę
+#  pozostala do splaty. Przy kazdym miesiacu doliczamy odsetki i odejmujemy
+#  ratę. Jeśli ostatnia rata jest wyższa niż pozostała do spłaty kwota,
+#  to zamiast odejmować całej raty należy wyzerować kwotę pozostałą.
+#  Na koniec działania programu wyświetl też ile w sumie zapłaciliśmy.
+
+
+
+
+
+
+
+
+
