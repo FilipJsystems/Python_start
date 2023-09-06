@@ -523,10 +523,49 @@ print(nlista)
 # Następnie przeiteruj po tej liście i każdy z jej elementów wyświetl na konsoli w osobnej linii.
 
 
-
 # Stwórz dwie listy. Każda z list ma zawierać 10 liczb losowych z zakresu 1-10.   # random.uniform() lub random.randrange()
 # Połącz te dwie listy do jednej i wyswietl na konsoli (extend albo dodać dwie listy (+))
 
+import random as rn
+
+nlista1 = []
+nlista2 = []
+for i in range(1,11):
+    nlista1.append(rn.randrange(1,11))
+    nlista2.append(rn.randrange(1,11))
+
+nlista = nlista1 + nlista2
+print(nlista)
+nlista1.extend(nlista2)
+print(nlista1)
+
+
+##### z wymiernymi:
+nlista1 = []
+nlista2 = []
+for i in range(1,11):
+    nlista1.append(rn.uniform(1,11))
+    nlista2.append(rn.uniform(1, 11))
+
+nlista = nlista1 + nlista2
+print(nlista)
+nlista1.extend(nlista2)
+print(nlista1)
+
+### test probablistyczny:
+for i in range(1,1000001):
+    x = rn.randrange(1, 2)
+    if x == 2:
+        print(x)
+        break
+print('zawsze 1')
+
+# wynika, ze 2 nigdy nie wystepuje wiec musimy zwiekszac o 1 prawa strone range.
+
+
+lista_skladana = [i for i in range(0,10)]
+
+# Korzystając z list składanych wygeneruj listę zawierajaca 10 kolejnych pierwiastków liczby 2
 
 
 
