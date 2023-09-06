@@ -564,6 +564,11 @@ print('zawsze 1')
 
 
 lista_skladana = [i for i in range(0,10)]
+### rownowaznosc tego zapisu:
+for i in range(0,10):
+    lista_skladana.append(i)
+
+lista_skladana = [str(i) for i in range(0,10)]
 
 # Korzystając z list składanych wygeneruj listę zawierajaca 10 kolejnych pierwiastków liczby 2
 
