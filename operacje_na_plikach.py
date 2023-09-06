@@ -572,6 +572,14 @@ lista_skladana = [str(i) for i in range(0,10)]
 
 # Korzystając z list składanych wygeneruj listę zawierajaca 10 kolejnych pierwiastków liczby 2
 
+lista_skladana = [2**(1/i) for i in range(1,11)]
+print(lista_skladana)
+
+
+l  = [i + j for i in range(0,10) for j in range(0,10)]
+# Korzystając z list składanych (zagniezdzonych) wygeneruj tabliczkę mnożenia. Każdy element będzie listą z 3 wartościami.
+# Pierwszy i drugi element tej podlisty to liczby, które mnożymy, a trzeci element to wynik mnożenia.
+
 
 
 
