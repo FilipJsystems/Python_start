@@ -696,12 +696,21 @@ for el in ListaKoncowa:
 # Z pliku dane.txt: Zapytaj użytkownika o frazę, a następnie wyświetl frazę z numerem linii oraz linią, w której znajduję się ta fraza
 # wzkazówka: in , ewentualnie ' '.join(list)
 
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane.csv'
+import os
+filename = os.path.join(path, filename)
+fraza = input('podaj poszukiwaną frazę')
+fraza = fraza.lower()
+nr_linii = 1
+with open(filename, 'r') as file:
+    for line in file:
+        if fraza in line.lower():
+            print(fraza, nr_linii, line )
+        nr_linii += 1
 
 
-
-
-
-
+#####################################
 
 
 
