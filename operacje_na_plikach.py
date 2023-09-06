@@ -649,7 +649,7 @@ with open(filename) as f:
         Wzrost = lista[0].strip()
         Masa = lista[1].strip()
         Wiek = lista[2].strip()
-        ImieNazwisko = lista[3].upper().split(' ')
+        ImieNazwisko = lista[3].upper().split(' ')  # split()
         Imie = ImieNazwisko[0].strip()
         Nazwisko = ImieNazwisko[1].strip()
         NowaLista = [Wzrost, Masa, Wiek, Imie, Nazwisko]
@@ -661,6 +661,9 @@ for el in ListaKoncowa:
     print(el)
 
 
+
+#Z pliku dane.txt. Dane posortuj po imionach i wyswietl linia po linii na konsoli.
+# wskazówka: itemgetter
 
 
 
