@@ -657,6 +657,8 @@ with open(filename) as f:
         ListaKoncowa.append(NowaLista)
         NowaLista = []
 
+# tutaj bedzie kod
+
 for el in ListaKoncowa:
     print(el)
 
@@ -664,6 +666,44 @@ for el in ListaKoncowa:
 
 #Z pliku dane.txt. Dane posortuj po imionach i wyswietl linia po linii na konsoli.
 # wskazówka: itemgetter
+
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane.csv'
+
+import os
+
+filename = os.path.join(path, filename)
+ListaKoncowa = []
+with open(filename) as f:
+    for line in f:
+        lista = line.split(',')
+        Wzrost = lista[0].strip()
+        Masa = lista[1].strip()
+        Wiek = lista[2].strip()
+        ImieNazwisko = lista[3].upper().split(' ')  # split()
+        Imie = ImieNazwisko[0].strip()
+        Nazwisko = ImieNazwisko[1].strip()
+        NowaLista = [Wzrost, Masa, Wiek, Imie, Nazwisko]
+        print(NowaLista)
+        ListaKoncowa.append(NowaLista)
+        NowaLista = []
+
+ListaKoncowa = sorted(ListaKoncowa, key = itemgetter(3))
+
+for el in ListaKoncowa:
+    print(el)
+
+# Z pliku dane.txt: Zapytaj użytkownika o frazę, a następnie wyświetl frazę z numerem linii oraz linią, w której znajduję się ta fraza
+# wzkazówka: in , ewentualnie ' '.join(list)
+
+
+
+
+
+
+
+
+
 
 
 
