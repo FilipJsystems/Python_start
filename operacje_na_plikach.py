@@ -430,12 +430,58 @@ for i in lista:
 
 ##########################################################
 
+l = [0,3,8,9,3,4,2,1]
+l.sort()
+l.reverse()
+print(l)
+
+l = [0,3,8,9,3,4,2,1]
+l = sorted(l, reverse=True)
+print(l)
+
+from operator import itemgetter
+
+lista = [[1, 'banan'], [3, 'ananas'], [2, 'cytryna'] ]
+
+lista = sorted(lista, key=itemgetter(0))
+lista = sorted(lista, key=itemgetter(1))
+
+l = [0,3,8,9,3,4,2,1,1,1]
+print(l.count(1))
+
+l.insert(5, 2999) #dodanie
+l.pop(5)
+print(l)
+
+l.remove(9)
+l.remove(1)
+
+l.remove('x')
+
+suma_list = l + lista
+
+l.extend(lista)
+
+l = [0,3,8,9,3,4,2,1,1,1]
+l.append(lista)
+
+
 # Korzystajac z petli stworz liste zawierajaca elementy same bedace listami.
 # Kazdy taki element ma zawierac numer potegi oraz wartosc tej potegi dla liczby 2.
+# potęgi mają być w zakresie [-1, -10]
+# Następnie posortuj listę za pomocą : a) indeksu b) potęgi c) wartośi potęgowania
 
 
 
-# to na jutro
+
+
+
+
+
+
+
+
+# to na pozniej
 # Napisz wyszukiwarkę plikową. Wyszukiwarka powinna odebrać od użytkownika
 #  poszukiwaną frazę, oraz nazwę pliku. Wyszukiwarka powinna wyświetlić
 #  linie w których znalazła poszukiwaną frazę wraz z numerem linii. Wyszukiwarka
