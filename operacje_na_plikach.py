@@ -469,8 +469,57 @@ l.append(lista)
 # Korzystajac z petli stworz liste zawierajaca elementy same bedace listami.
 # Kazdy taki element ma zawierac numer potegi oraz wartosc tej potegi dla liczby 2.
 # potęgi mają być w zakresie [-1, -10]
+
+lista = []
+for i in range(-10,0):
+    print(i, 2**i)
+    lista.append([i, 2**i])
+
+print(lista)
+
+lista = []
+for i in range(1, 11):
+    print(i, 2**(-i))
+    lista.append([-i, 2**(-i)])
+
+print(lista)
+
 # Następnie posortuj listę za pomocą : a) indeksu b) potęgi c) wartośi potęgowania
 
+final_list = []   # [   [0,-1,0.5], [1,-2, 0.25] ...]
+for i, el in enumerate(lista):
+    el.insert(0, i)
+
+sorted_by_index = sorted(lista, key=itemgetter(0))
+sorted_by_power = sorted(lista, key=itemgetter(1))
+sorted_by_result = sorted(lista, key=itemgetter(2))
+
+###################################################
+### rozwiazanie w wersji Marcina:
+
+nlista = []
+nPodLista = []
+iLicznik = 0
+for i in range(-10,0):
+    nPodLista.append(iLicznik)
+    nPodLista.append(i)
+    nPodLista.append(2**i)
+    nlista.append(nPodLista)
+    nPodLista = []
+    iLicznik = iLicznik + 1
+
+nlista = sorted(nlista, key=itemgetter(0))
+print(nlista)
+nlista = sorted(nlista, key=itemgetter(1))
+print(nlista)
+nlista = sorted(nlista, key=itemgetter(2))
+print(nlista)
+
+
+##################################################
+
+# Stwórz dwie listy. Każda z list ma zawierać 10 liczb losowych z zakresu 1-10.
+# Połącz te dwie listy do jednej i wyswietl na konsoli (extend albo dodać dwie listy (+))
 
 
 
