@@ -580,10 +580,18 @@ l  = [i + j for i in range(0,10) for j in range(0,10)]
 # Korzystając z list składanych (zagniezdzonych) wygeneruj tabliczkę mnożenia. Każdy element będzie listą z 3 wartościami.
 # Pierwszy i drugi element tej podlisty to liczby, które mnożymy, a trzeci element to wynik mnożenia.
 
+# wstep - tradycyjnie
 
+l = []
+for i in range(1,11):
+    for j in range(1,11):
+        l.append([i,j,i*j])
 
+# z listą składaną:
 
+l  = [ i,j,i*j] for i in range(1,11) for j in range(1,11)]
 
+########
 
 
 
