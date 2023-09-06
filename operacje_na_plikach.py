@@ -592,6 +592,33 @@ for i in range(1,11):
 l  = [ i,j,i*j] for i in range(1,11) for j in range(1,11)]
 
 ########
+### .upper() .lower()
+'filip waszkiewicz'.title()
+'Blockchain in the use of social media'.title()
+'COKOLWIEK'.title()
+
+l = 'filip waszkiewicz'.title().split()
+
+s = '@'.join(['Filip', 'Waszkiewicz'])
+print(s.split('@'))
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane.txt'
+
+import os
+f = os.path.join(path,filename)
+
+# Napisz program który z pliku dane.txt (lub dane.csv) wyświetli powiekszone imiona i nazwiska oraz wzrost i masę
+
+
+
+
+
+
+
+
+
+
+
 
 
 
