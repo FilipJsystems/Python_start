@@ -369,13 +369,32 @@ with open(path, 'r') as file:
         counter = counter + line.lower().count(fraza.lower())
 print(counter)
 
+
+
+# odczytaj element 'x' z podanej listy.
+# odczytaj wszystkie elementy wewnaatrz list zagniezdzonych (wewnatrz list, ktore sa w liscie):
+# lista = [1, 2, 3, 5, 8, 13, 21, [34], [52, 'x', 0]]  . Zakładamy, że nie wiemy który element listy jest  listą.
+# innymi słowy, chcemy odczytać 34, 52, 'x', 0 nie wiedząc nic o ich położeniu
+
+print(type('a'))
+print(type([1,2,3]))
+print(str(type([1,2,3])) == "<class 'list'>")
+
+
+
+
+
+
 # Korzystajac z petli stworz liste zawierajaca elementy same bedace listami.
 # Kazdy taki element ma zawierac numer potegi oraz wartosc tej potegi dla liczby 2.
 
 
-# to na jutro (musze omowic biblioteke os)
+# to na jutro
 # Napisz wyszukiwarkę plikową. Wyszukiwarka powinna odebrać od użytkownika
 #  poszukiwaną frazę, oraz nazwę pliku. Wyszukiwarka powinna wyświetlić
-#   inie w których znalazła poszukiwaną frazę wraz z numerem linii. Wyszukiwarka
-#     odebraniu danych od uzyszkodnika powinna wyswietlic jakiej frazy
-#   i  jakim pliku szuka. Wyszukiwarka powinna być nieczula na wielkosc liter.
+#  linie w których znalazła poszukiwaną frazę wraz z numerem linii. Wyszukiwarka
+#  odebraniu danych od uzyszkodnika powinna wyswietlic jakiej frazy
+#  i  jakim pliku szuka. Wyszukiwarka powinna być nieczula na wielkosc liter.
+
+
+# (musze omowic biblioteke os)
