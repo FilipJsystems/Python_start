@@ -185,7 +185,31 @@ with open( r'C:\Users\localadmin\PycharmProjects\pythonProject\output.txt', 'w')
         string = ';'.join(list(el))+'\n'   ## HIPER-WAZNE - lista do zrobienia join musi składać się z samych stringów
         f.write(string)
 
+############################
 
+# Stwórz plik ustawienia.txt i umieść w nim poniższe dane
+# encoding;utf-8
+# timezone;-2
+# color;black
+# Następnie wczytaj dane do słownika w ten sposób by pierwsza kolumna stanowila klucze a druga przypisane do nich
+# wartości. Przeiteruj po słowniku i wypisz klucze oraz przypisane do nich wartości
+
+
+dic = dict()
+dic = {}
+
+dic = {1:2, 'a': ['a', 'b'], (1,2): 'dupa', 3.9: {2,3} }
+
+# klucze: stringi, integery, floaty, krotki,   - podstawowe zmienne i elementy niemutowalne
+# nie może być kluczem: lista, zbiór/zestaw/set, słownik (dict)  - elementy mutowalne
+
+# klucz musi wyjątkowy
+
+dic.values()
+dic.keys()
+dic.items()
+
+########
 
 
 
