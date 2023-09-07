@@ -395,6 +395,22 @@ finally:
 # Wyświetl wynik dzielenia 1 przez kolejne liczby z zakresu -10 do 10.
 # zeby nie wyskoczyl na błąd - żeby błą nie przerwał dalszej operacji
 
+for i in range(-10, 11):
+    try:
+        print(1/i)
+    except:
+        print('error')
+
+###
+
+for i in range(-10, 11):
+    try:
+        print(1/i)
+    except ZeroDivisionError:
+        print('dzielenie przez zero')
+    except:
+        print('jakiś inny błąd')
 
 
-
+# Wyświetl wynik dzielenia 1 przez kolejne liczby z zakresu -10 do 10.
+# jeżeli jest jakiś błąd - złap go i zapisz w pliku log.txt
