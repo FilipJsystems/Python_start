@@ -148,3 +148,8 @@ print(ListaKoncowa)
 ListaKoncowa = list(set(ListaKoncowa))
 print(ListaKoncowa)
 
+###################
+# Przetwórz plik dane.txt (csv) w taki sposób by w efekcie umieścić w pliku output.txt (koniecznie w txt)
+# dane z pliku dane.txt wzbogacone o obliczone BMI, bez duplikatów i rozwiązując problem
+# podania przecinka w miejsce kropki we wzroście i masie oraz problem z pustymi wierszami.
+#
