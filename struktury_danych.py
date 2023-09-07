@@ -10,9 +10,9 @@ t = tuple([1, 2, 3, 4]) # tak można zadeklarować krotkę
 t = (1, 1, 1, 2, 3, 4)  # tak można zadeklarować krotkę
 # t = tuple(1,2,3,4)   # tak nie można deklarować krotki, ponieważ tuple() przyjmuje tylko jeden argument (najlepiej listę)
 
-t.count(1)  # liczy ilosc elementow
-t.index(4)  # to podaje indeks danego elementu
-t.index(1)
+print(t.count(1))  # liczy ilosc elementow
+print(t.index(4))  # to podaje indeks danego elementu (nie element o indeksie)
+print(t.index(1))
 
 for el in t:
     print(el)
@@ -25,6 +25,7 @@ t = tuple(i for i in range(0,100))
 # Stwórz trzecią krotkę która ma zawierać dane z obu krotek. Trzecią krotkę wypisz na konsoli
 
 # tuple(rn.randrange(1,11), rn...)   # to nie jest najwygodniejszy sposob
+import random as rn
 
 t1 = tuple( rn.randrange(1,11) for i in range(0,10) )   # odpowiednik składanej listy dla krotek
 t2 = tuple( rn.randrange(11,21) for i in range(0,10) )
@@ -94,7 +95,7 @@ l = [1,1,1,1,2,3,4,5]
 print(set(l))
 
 print(l)
-l = list(set(l))  # przydatny trick na pozbycie dupliaktów.
+l = list(set(l))  # przydatny trick na pozbycie sié dupliaktów w liście.
 print(l)
 
 ##### działania na zbiorach:
@@ -141,11 +142,11 @@ filename = os.path.join(path, filename)
 ListaKoncowa = []
 with open(filename) as f:
     for line in f:
-        NowaKrotka = tuple(line.split(','))
+        NowaKrotka = tuple(line.split(','))   # zamieniamy linię (string) na listę (za pomocą split(,)), a następnie listę na krotkę
         ListaKoncowa.append(NowaKrotka)
 
 print(ListaKoncowa)
-ListaKoncowa = list(set(ListaKoncowa))
+ListaKoncowa = list(set(ListaKoncowa))      # usuwamy duplikaty z listy
 print(ListaKoncowa)
 
 ###################
@@ -160,29 +161,29 @@ filename = 'dane.csv'
 filename = os.path.join(path, filename)
 ListaKoncowa = []
 with open(filename) as f:
-    string = f.read()
-    string = string.replace(',','\t')
-    lista = string.split('\n')
+    string = f.read()                   # zczytujemy cały plik do stringa
+    string = string.replace(',','\t')   # zamieniamy przecinek na inny delimeter (tabulator), bo przecinków chcemy użyć zamiast kropek we floatach (sprowadzamy do polskiej notacji)
+    lista = string.split('\n')          # rozdzielamy linia po linii
     for line in lista:
-        if line.strip():
-            lista2 = line.strip().split()
-            bmi = float(lista2[1]) / (float(lista2[0]) ** 2)
-            wzrost = lista2[0].replace('.', ',')
-            bmi  = str(round(bmi, 2)).replace('.', ',')
+        if line.strip():                # jeśli linia nie jest pusta
+            lista2 = line.strip().split()       # usuwamy niepotrzebne spacje z lewej i prawej oraz '\n', następnie tworzymy listę za pomocą split()
+            bmi = float(lista2[1]) / (float(lista2[0]) ** 2)        # liczymi BMI zanim zamienimy na '.' na ',' - inaczej nie zamieni się na float
+            wzrost = lista2[0].replace('.', ',')                # zamieniamy kropki na przecinki (do polskiej notacji)
+            bmi  = str(round(bmi, 2)).replace('.', ',')         # zaokrąglamy bmi do 2 miejsc po przecinku
             waga = lista2[1]
             wiek =  lista2[2]
             imie = lista2[3]
             nazwisko = lista2[4]
-            name = lista2[3] + ' ' + lista2[4]
-            ListaKoncowa.append((wzrost, waga, wiek, name, bmi))
+            name = lista2[3] + ' ' + lista2[4]                       # tworzymy nową zmienną zawierającą imię i nazwisko po spacji
+            ListaKoncowa.append((wzrost, waga, wiek, name, bmi))     # dodajemy w postaci krotki do listy
 
 print(ListaKoncowa)
 
-ListaKoncowa = list(set(ListaKoncowa))
+ListaKoncowa = list(set(ListaKoncowa))          # pozbywamy się duplikatów
 
 with open( r'C:\Users\localadmin\PycharmProjects\pythonProject\output.txt', 'w') as f:
     for el in ListaKoncowa:
-        string = ';'.join(list(el))+'\n'   ## HIPER-WAZNE - lista do zrobienia join musi składać się z samych stringów
+        string = ';'.join(list(el))+'\n'   ## HIPER-WAZNE - lista do zrobienia join musi składać się z samych elementów string
         f.write(string)
 
 ############################
@@ -194,12 +195,12 @@ dic = {}
 
 dic = {1:2, 'a': ['a', 'b'], (1,2): 'dupa', 3.9: {2,3} }
 
-# klucze: stringi, integery, floaty, krotki,   - podstawowe zmienne i elementy niemutowalne
+# kluczami mogą być: stringi, integery, floaty, krotki,   - podstawowe zmienne i elementy niemutowalne
 # nie może być kluczem: lista, zbiór/zestaw/set, słownik (dict)  - elementy mutowalne
 
-# wartości - może być zasadniczo każdy obiekt
+# wartości - może być zasadniczo każdy typ danych
 
-# klucz musi wyjątkowy
+# klucz musi wyjątkowy - unikalny. Nie mogą być dwa takie same klucze. Dodając do słownika element o kluczu, który już jest nadpiszemy jego wartość
 
 print(dic.values()) # wypisanie wartości
 print(dic.keys())  # wypisanie kluczy
@@ -261,7 +262,7 @@ if 3 in dic.values():
 dic['c'] = 4
 print(dic)
 
-# for i in lista:          #   złożonośc obliczeniową liniową = n
+# for i in lista:          #   wydajność obliczeniową liniową = n
 #     pass # jakas operacja
 #
 #
@@ -305,7 +306,7 @@ for key, val in dic.items():
 
 
 
-znaki = ['!', ',', '.', '?', '-', ':', ';']
+znaki = ['!', ',', '.', '?', '-', ':', ';']  # można dołożyć więcej znaków, potem omówmy regex jeśli starczy czasu
 string = 'aaaa!'
 for el in znaki:
     string = string.replace(el, '')
@@ -315,7 +316,7 @@ path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
 filename = 'Pan_Tadeusz.txt'
 filename = os.path.join(path, filename)
 lista = []
-with open(filename, encoding="utf8") as f:
+with open(filename, encoding="utf8") as f:   # czasem pojawiają się dziwne charaktery (znaki) i trzeba ustalić  encoding="utf8" (lub inny encoding)
     for line in f:
         string = line.strip()  # pozbywam się pustych linii, niepotrzebnych spacji itd , '\n'
         temp = string.split()  # string zostaje rozdzielona na liste słow
@@ -332,13 +333,13 @@ print(len(unikalne))
 ##  [ ('dzień', 38), (pan,  35) ]
 dic = {}
 for slowo in lista:
-    slowo = str(slowo).lower()
-    if slowo not in dic.keys():
+    slowo = str(slowo).lower()   # ujednoliamy do małych liter
+    if slowo not in dic.keys():     # jeśli słowa (klucza) nie ma w słowniku, to ustalamy wartość dla klucza = 1 ( bo to pierwszy napotkany taki element)
         dic[slowo] = 1
     else:
-        ile = dic[slowo]
-        ile += 1
-        dic[slowo] = ile
+        ile = dic[slowo]         # w przeciwnym wypadku musimy pobrać wartość przypisaną do danego słowo-klucza
+        ile += 1                 # zwiększyć o jeden
+        dic[slowo] = ile         # updatować wartość dla danego klucza
 
 # wskazówka: ListaKoncowa = sorted(ListaKoncowa, key = itemgetter(3))
 # posortować
@@ -352,85 +353,4 @@ lista2 = sorted(lista2, key = itemgetter(1), reverse=True)
 print(lista2)
 
 #################################################
-
-try:
-    print('i'+ 9)
-except:
-    pass
-
-
-try:
-    print('i'+ 2)
-except Exception as e:
-    print(e)
-
-
-
-try:
-    print(1/0)
-except ZeroDivisionError:
-    print("nie można dzielić przez zero!")
-except:
-    print("jakiś inny błąd")
-
-# rodzaje błędów: ZeroDivisionError,IOError, ValueError, TypeError,
-
-try:
-    print("działa")
-except ValueError:
-    print("wyjątek")
-else:
-    print("nie bylo wyjatku")
-
-
-try:
-    raise TypeError()
-except TypeError:
-    print("nie ma po co podnosić TypeError")
-
-
-try:
-    print(1/0)
-except:
-    print("wyjątek")
-finally:
-    print("co by się nie działo to ja się uruchamiam")
-
-####################################
-
-# Wyświetl wynik dzielenia 1 przez kolejne liczby z zakresu -10 do 10.
-# zeby nie wyskoczyl na błąd - żeby błą nie przerwał dalszej operacji
-
-for i in range(-10, 11):
-    try:
-        print(1/i)
-    except:
-        print('error')
-
-###
-
-for i in range(-10, 11):
-    try:
-        print(1/i)
-    except ZeroDivisionError:
-        print('dzielenie przez zero')
-    except:
-        print('jakiś inny błąd')
-
-
-# Wyświetl wynik dzielenia 1 przez kolejne liczby z zakresu -10 do 10.
-# jeżeli jest jakiś błąd - złap go i zapisz w pliku log.txt
-
-import os
-path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
-filename = 'log.txt'
-filename = os.path.join(path, filename)
-
-for i in range(-10, 11):
-    try:
-        print(1/i)
-    except Exception as e:
-        print('error', e)
-        with open(filename, 'a') as f:
-            f.write(str(e)+'\n')
 
