@@ -133,3 +133,18 @@ print(set1.intersection(s2))
 # Zduplikuj jeden z wierszy w pliku dane.txt.
 # Napisz kod który zwróci do postaci listy krotek zawartość tego pliku z danymi bez powtórek.
 # bez powtórek - czyli z użyciem set
+
+import os
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane.csv'
+filename = os.path.join(path, filename)
+ListaKoncowa = []
+with open(filename) as f:
+    for line in f:
+        NowaKrotka = tuple(line.split(','))
+        ListaKoncowa.append(NowaKrotka)
+
+print(ListaKoncowa)
+ListaKoncowa = list(set(ListaKoncowa))
+print(ListaKoncowa)
+
