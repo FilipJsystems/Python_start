@@ -354,6 +354,12 @@ print(lista2)
 #################################################
 
 try:
+    print('i'+ 9)
+except:
+    pass
+
+
+try:
     print('i'+ 2)
 except Exception as e:
     print(e)
@@ -414,3 +420,17 @@ for i in range(-10, 11):
 
 # Wyświetl wynik dzielenia 1 przez kolejne liczby z zakresu -10 do 10.
 # jeżeli jest jakiś błąd - złap go i zapisz w pliku log.txt
+
+import os
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'log.txt'
+filename = os.path.join(path, filename)
+
+for i in range(-10, 11):
+    try:
+        print(1/i)
+    except Exception as e:
+        print('error', e)
+        with open(filename, 'a') as f:
+            f.write(str(e)+'\n')
+
