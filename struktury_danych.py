@@ -182,7 +182,7 @@ ListaKoncowa = list(set(ListaKoncowa))
 
 with open( r'C:\Users\localadmin\PycharmProjects\pythonProject\output.txt', 'w') as f:
     for el in ListaKoncowa:
-        string = ';'.join(list(el))+'\n'
+        string = ';'.join(list(el))+'\n'   ## HIPER-WAZNE - lista do zrobienia join musi składać się z samych stringów
         f.write(string)
 
 
