@@ -340,10 +340,18 @@ for slowo in lista:
         ile += 1
         dic[slowo] = ile
 
-# ListaKoncowa = sorted(ListaKoncowa, key = itemgetter(3))
+# wskazówka: ListaKoncowa = sorted(ListaKoncowa, key = itemgetter(3))
 # posortować
+from operator import itemgetter
 
+lista2 = []
+for key, val in dic.items():
+    lista2.append((key, val))
 
+lista2 = sorted(lista2, key = itemgetter(1), reverse=True)
+print(lista2)
+
+#################################################
 
 
 
