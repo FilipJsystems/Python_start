@@ -353,10 +353,47 @@ print(lista2)
 
 #################################################
 
+try:
+    print('i'+ 2)
+except Exception as e:
+    print(e)
 
 
 
+try:
+    print(1/0)
+except ZeroDivisionError:
+    print("nie można dzielić przez zero!")
+except:
+    print("jakiś inny błąd")
 
+# rodzaje błędów: ZeroDivisionError,IOError, ValueError, TypeError,
+
+try:
+    print("działa")
+except ValueError:
+    print("wyjątek")
+else:
+    print("nie bylo wyjatku")
+
+
+try:
+    raise TypeError()
+except TypeError:
+    print("nie ma po co podnosić TypeError")
+
+
+try:
+    print(1/0)
+except:
+    print("wyjątek")
+finally:
+    print("co by się nie działo to ja się uruchamiam")
+
+####################################
+
+# Wyświetl wynik dzielenia 1 przez kolejne liczby z zakresu -10 do 10.
+# zeby nie wyskoczyl na błąd - żeby błą nie przerwał dalszej operacji
 
 
 
