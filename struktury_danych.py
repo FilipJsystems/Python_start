@@ -120,4 +120,16 @@ print(set1 - set2)      # róznica zbiorów zbiorów - inny zapis
 # Wygeneruj dwa zestawy, dodaj do nich po 20 (w przypadku duplikatów lista może być mniejsza niż 20 elementów) losowych liczb z zakresu 1-40.
 # Wyswietl ich sumę, różnicę i część wspólną
 
+import random as rn
+s1 = set(rn.randrange(1,41) for i in range(1,21))
+s2 = set(rn.randrange(1,41) for i in range(1,21))
 
+print(s1)
+print(s2)
+print(s1.union(s2))
+print(s1.difference(s2))
+print(set1.intersection(s2))
+
+# Zduplikuj jeden z wierszy w pliku dane.txt.
+# Napisz kod który zwróci do postaci listy krotek zawartość tego pliku z danymi bez powtórek.
+# bez powtórek - czyli z użyciem set
