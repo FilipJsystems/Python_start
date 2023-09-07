@@ -278,6 +278,30 @@ print(dic)
 # lista[0:3] - pozostałe elementy
 # lista[:-1] - wszystkie elementy poza ostatnim
 
+import os
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane2.csv'
+filename = os.path.join(path, filename)
+dic = {}
+with open(filename, 'r') as f:
+    for line in f:
+        lista = line.split(',')
+        full_name = str(lista[-1]).strip()
+        rest = lista[:-1]
+        dic[full_name] = rest
+
+for key, val in dic.items():
+    print('klucz:',key, ', wartosc:',val)
+
+
+###################################################
+
+# Napisz system który zwróci nam ilość wystąpień każdego ze słow w pliku w postaci listy krotek.
+# [  (slowo,ilosc_wystapien),(slowo,ilosc_wystapien)   ]. Nazwa pliku ma zostać przekazana przez zmienną.
+# Wynik powinien byc posortowany malejąco wg ilosci wystapien
+
+# a) odczytaj wszystkie linie z pliku i rozbij na słowa. Każde ze słów dodaj do osobnej listy.
+#     Zadbaj o usunięcie po drodze znaków specjalnych czyli kropek, przecinków, wykrzykników etc.
 
 
 
