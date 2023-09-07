@@ -153,3 +153,40 @@ print(ListaKoncowa)
 # dane z pliku dane.txt wzbogacone o obliczone BMI, bez duplikatów i rozwiązując problem
 # podania przecinka w miejsce kropki we wzroście i masie oraz problem z pustymi wierszami.
 #
+
+import os
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'dane.csv'
+filename = os.path.join(path, filename)
+ListaKoncowa = []
+with open(filename) as f:
+    string = f.read()
+    string = string.replace(',','\t')
+    lista = string.split('\n')
+    for line in lista:
+        if line.strip():
+            lista2 = line.strip().split()
+            bmi = float(lista2[1]) / (float(lista2[0]) ** 2)
+            wzrost = lista2[0].replace('.', ',')
+            bmi  = str(round(bmi, 2)).replace('.', ',')
+            waga = lista2[1]
+            wiek =  lista2[2]
+            imie = lista2[3]
+            nazwisko = lista2[4]
+            name = lista2[3] + ' ' + lista2[4]
+            ListaKoncowa.append((wzrost, waga, wiek, name, bmi))
+
+print(ListaKoncowa)
+
+ListaKoncowa = list(set(ListaKoncowa))
+
+with open( r'C:\Users\localadmin\PycharmProjects\pythonProject\output.txt', 'w') as f:
+    for el in ListaKoncowa:
+        string = ';'.join(list(el))+'\n'
+        f.write(string)
+
+
+
+
+
+
