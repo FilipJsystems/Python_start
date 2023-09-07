@@ -197,13 +197,13 @@ dic = {1:2, 'a': ['a', 'b'], (1,2): 'dupa', 3.9: {2,3} }
 # klucze: stringi, integery, floaty, krotki,   - podstawowe zmienne i elementy niemutowalne
 # nie może być kluczem: lista, zbiór/zestaw/set, słownik (dict)  - elementy mutowalne
 
-
+# wartości - może być zasadniczo każdy obiekt
 
 # klucz musi wyjątkowy
 
-dic.values()
-dic.keys()
-dic.items()
+print(dic.values()) # wypisanie wartości
+print(dic.keys())  # wypisanie kluczy
+print(dic.items()) # wypisanie par key-value
 
 # dic[key] = value
 dic['bbb'] = 'cccc'
@@ -216,6 +216,66 @@ dic['bbb'] = 'cccc'
 # color;black
 # Następnie wczytaj dane do słownika w ten sposób by pierwsza kolumna stanowila klucze a druga przypisane do nich
 # wartości. Przeiteruj po słowniku i wypisz klucze oraz przypisane do nich wartości
+
+dic = {}
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'ustawienia.txt'
+filename = os.path.join(path, filename)
+with open(filename, 'r') as f:
+    for line in f:
+        lista = line.split(';')
+        key = lista[0]
+        value = lista[1]
+        dic[key] = value.strip()
+
+for el in dic.items():
+    print(el)
+
+for key, value in dic.items():
+    print(key, value)
+
+#########################################################################
+### inne przykłady
+
+dic = {'a':2, 'b':3 }
+print(dic)
+### usuwanie elementu ze słowników:
+del dic['a']
+print(dic)
+
+#### sprawdzanie czy element jest w słowniku:
+if 'b' in dic:
+    print('yes')
+
+if 3 in dic:
+    print('yes')
+else:
+    print('no')     # jak widać, defaultowo sprawdzenie 'in dic' odwołuje się do sprawdzania kluczy
+
+if 'b' in dic.keys():
+    print('yes')
+
+if 3 in dic.values():
+    print('yes')
+
+dic['c'] = 4
+print(dic)
+
+# for i in lista:          #   złożonośc obliczeniową liniową = n
+#     pass # jakas operacja
+#
+#
+# # dic[el]    # wydajność natychmiastiowa O(1)
+#
+# for i in lista:
+#     for i in lista:
+#         for i in lista:     # złożoność n^3
+
+# Wczytaj do słownika dane z pliku dane.txt (csv) tak by kluczem było imię sklejone z nazwiskiem rozdzielone spacja, a pozostałe dane znalazły się w wartości
+# jako krotka lub lista. Przeiteruj po slowniku i wyswietl jego zawartość.
+
+
+
 
 
 
