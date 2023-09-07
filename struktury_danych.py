@@ -300,8 +300,52 @@ for key, val in dic.items():
 # [  (slowo,ilosc_wystapien),(slowo,ilosc_wystapien)   ]. Nazwa pliku ma zostać przekazana przez zmienną.
 # Wynik powinien byc posortowany malejąco wg ilosci wystapien
 
-# a) odczytaj wszystkie linie z pliku i rozbij na słowa. Każde ze słów dodaj do osobnej listy.
+# a) odczytaj wszystkie linie z pliku i rozbij na słowa. Każde ze słów dodaj do listy.
 #     Zadbaj o usunięcie po drodze znaków specjalnych czyli kropek, przecinków, wykrzykników etc.
+
+
+
+znaki = ['!', ',', '.', '?', '-', ':', ';']
+string = 'aaaa!'
+for el in znaki:
+    string = string.replace(el, '')
+
+import os
+path = r'C:\Users\localadmin\PycharmProjects\pythonProject'
+filename = 'Pan_Tadeusz.txt'
+filename = os.path.join(path, filename)
+lista = []
+with open(filename, encoding="utf8") as f:
+    for line in f:
+        string = line.strip()  # pozbywam się pustych linii, niepotrzebnych spacji itd , '\n'
+        temp = string.split()  # string zostaje rozdzielona na liste słow
+        lista.extend(temp)
+
+len(lista)
+unikalne = set(lista)
+print(len(unikalne))
+
+
+ # stwórz słownik i dla każdego słowa w liście sprawdz czy istnieje juz wpis dotyczący tego słowa
+ # w słowniku. Jeśli nie ma to dodaj do słownika wpis o kluczu takim jak sprawdzane słowo i wartości 1
+ # dla ilości wystąpień. Jeśli takie słowo pojawia się już w kluczach słownika to trzeba zwiększyc wartośc o 1
+##  [ ('dzień', 38), (pan,  35) ]
+dic = {}
+for slowo in lista:
+    slowo = str(slowo).lower()
+    if slowo not in dic.keys():
+        dic[slowo] = 1
+    else:
+        ile = dic[slowo]
+        ile += 1
+        dic[slowo] = ile
+
+# ListaKoncowa = sorted(ListaKoncowa, key = itemgetter(3))
+# posortować
+
+
+
+
 
 
 
