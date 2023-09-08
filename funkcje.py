@@ -136,3 +136,9 @@ print(liczby_parzyste)  # Output: [2, 4, 6, 8, 10]
 # Stwórz funkcję która przyjmie wzrost i masę a zwróci zaokraglone do 2 miejsc po przecinku BMI.
 # W przypadku pojawienia się wyjątku, wyświetl na konsoli jaki wystąpił problem a z funkcji zwróć -1.
 
+
+
+# Napisz funkcję która zwróci pod postacią listy krotek zawartość pliku
+# którego nazwę przekażemy przez pierwszy argument funkcji. Plik ma być otwarty z kodowaniem
+# podanym jako drugi argument funkcji. Jeśli kodowanie nie zostanie podane ma przyjac utf-8
+
