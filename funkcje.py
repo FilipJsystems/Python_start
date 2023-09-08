@@ -136,9 +136,47 @@ print(liczby_parzyste)  # Output: [2, 4, 6, 8, 10]
 # Stwórz funkcję która przyjmie wzrost i masę a zwróci zaokraglone do 2 miejsc po przecinku BMI.
 # W przypadku pojawienia się wyjątku, wyświetl na konsoli jaki wystąpił problem a z funkcji zwróć -1.
 
+def oblicz_bmi(wzrost, masa):
+    try:
+        bmi = masa / (wzrost * wzrost)
+        return round(bmi, 2)
+    except Exception as e:
+        print(f"Wystąpił problem: {e}")
+        return -1
 
+print(oblicz_bmi(1.75, '70'))
 
 # Napisz funkcję która zwróci pod postacią listy krotek zawartość pliku
 # którego nazwę przekażemy przez pierwszy argument funkcji. Plik ma być otwarty z kodowaniem
 # podanym jako drugi argument funkcji. Jeśli kodowanie nie zostanie podane ma przyjac utf-8
+
+def wczytaj_plik(nazwa_pliku, kodowanie="utf-8"):
+    try:
+        with open(nazwa_pliku, encoding=kodowanie) as plik:
+            zawartosc = plik.readlines()
+        return [tuple(linia.strip().split()) for linia in zawartosc]
+    except Exception as e:
+        print(f"Wystąpił problem: {e}")
+        return []
+
+print(wczytaj_plik("plik.txt"))
+print(wczytaj_plik("plik.txt", "iso-8859-1"))
+
+# Napisz funkcję, która przyjmuje listę krotek ze wzrostem i masą i liczy BMI dla każdej krotki
+# używając funkcji map oraz funkcji w funkcji
+
+
+
+
+
+
+
+
+
+# Przykład użycia:
+krotki = [(170, 70), (180, 80)]
+print(oblicz_bmi_dla_krotek(krotki))
+
+
+
 
