@@ -165,7 +165,15 @@ print(wczytaj_plik("plik.txt", "iso-8859-1"))
 # Napisz funkcję, która przyjmuje listę krotek ze wzrostem i masą i liczy BMI dla każdej krotki
 # używając funkcji map oraz funkcji w funkcji
 
+def oblicz_bmi_dla_krotek(lista_krotek):
+    def oblicz_bmi(krotka):
+        wzrost, masa = krotka
+        return masa / (wzrost / 100) ** 2
+    return list(map(oblicz_bmi, lista_krotek))
 
+# Przykład użycia:
+krotki = [(170, 70), (180, 80)]
+print(oblicz_bmi_dla_krotek(krotki))
 
 
 
