@@ -1,3 +1,5 @@
+## Update: materiały z ostatnich tematów wraz z komentarzami i przykładami pojawią się w ten weekend (dziś i jutro) - ostatni commit pojawi się nie później niż w niedziele o północy
+
 # Witamy na szkoleniu z Pythona!
 
 ## Najważniejsze informacje
